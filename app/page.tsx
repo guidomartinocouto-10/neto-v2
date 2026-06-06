@@ -20,9 +20,9 @@ export default function Home() {
         <p className="text-xl text-gray-500 mb-10">
           NETO te ayuda a entender tus impuestos, elegir la estructura correcta<br />y tomar mejores decisiones financieras. Sin jerga contable.
         </p>
-        <a href="#simulador" className="bg-gray-900 text-white px-8 py-4 rounded-lg text-base font-medium hover:bg-gray-700 transition">
-          Calculá tu sueldo neto →
-        </a>
+        <a href="/simulador" className="bg-gray-900 text-white px-8 py-4 rounded-lg text-base font-medium hover:bg-gray-700 transition">
+  Calculá tu sueldo neto →
+</a>
       </section>
 
       {/* PROBLEMA */}
