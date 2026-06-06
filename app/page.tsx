@@ -6,7 +6,7 @@ export default function Home() {
         <span className="text-xl font-bold tracking-tight">NETO</span>
         <div className="flex gap-8 text-sm text-gray-500">
           <a href="#simulador" className="hover:text-gray-900">Simulador</a>
-          <a href="#estructuras" className="hover:text-gray-900">Estructuras</a>
+          <a href="/estructuras" className="hover:text-gray-900">Estructuras</a>
           <a href="#faq" className="hover:text-gray-900">Preguntas frecuentes</a>
         </div>
       </nav>
