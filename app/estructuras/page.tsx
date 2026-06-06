@@ -1,3 +1,6 @@
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
+
 export default function Estructuras() {
   const estructuras = [
     {
@@ -39,8 +42,9 @@ export default function Estructuras() {
   ];
 
   return (
-    <main className="min-h-screen bg-white px-8 py-16">
-      <div className="max-w-5xl mx-auto">
+    <main className="min-h-screen bg-white flex flex-col">
+      <Navbar />
+      <div className="max-w-5xl mx-auto px-8 py-16 w-full">
         <a href="/" className="text-sm text-gray-400 hover:text-gray-900 mb-8 inline-block">← Volver al inicio</a>
         <p className="text-sm uppercase tracking-widest text-gray-400 mb-4">Comparación</p>
         <h1 className="text-4xl font-bold mb-4">¿Cuál estructura te conviene?</h1>
@@ -103,6 +107,7 @@ export default function Estructuras() {
           </a>
         </div>
       </div>
+      <Footer />
     </main>
   );
 }

@@ -1,15 +1,10 @@
+import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
+
 export default function Home() {
   return (
     <main className="min-h-screen bg-white text-gray-900">
-      {/* NAV */}
-      <nav className="flex justify-between items-center px-8 py-6 border-b border-gray-100">
-        <span className="text-xl font-bold tracking-tight">NETO</span>
-        <div className="flex gap-8 text-sm text-gray-500">
-          <a href="#simulador" className="hover:text-gray-900">Simulador</a>
-          <a href="/estructuras" className="hover:text-gray-900">Estructuras</a>
-          <a href="#faq" className="hover:text-gray-900">Preguntas frecuentes</a>
-        </div>
-      </nav>
+      <Navbar />
 
       {/* HERO */}
       <section className="max-w-3xl mx-auto px-8 py-32 text-center">
@@ -21,8 +16,8 @@ export default function Home() {
           NETO te ayuda a entender tus impuestos, elegir la estructura correcta<br />y tomar mejores decisiones financieras. Sin jerga contable.
         </p>
         <a href="/simulador" className="bg-gray-900 text-white px-8 py-4 rounded-lg text-base font-medium hover:bg-gray-700 transition">
-  Calculá tu sueldo neto →
-</a>
+          Calculá tu sueldo neto →
+        </a>
       </section>
 
       {/* PROBLEMA */}
@@ -49,31 +44,34 @@ export default function Home() {
       </section>
 
       {/* SIMULADOR CTA */}
-      <section id="simulador" className="max-w-3xl mx-auto px-8 py-24 text-center">
+      <section className="max-w-3xl mx-auto px-8 py-24 text-center">
         <h2 className="text-3xl font-bold mb-4">Simulá tu situación en 2 minutos</h2>
         <p className="text-gray-500 mb-8">Respondé algunas preguntas y te mostramos cuánto te queda después de impuestos.</p>
-        <div className="bg-gray-50 border border-gray-200 rounded-2xl p-10">
-          <p className="text-gray-400 text-sm">— Simulador próximamente —</p>
-        </div>
+        <a href="/simulador" className="bg-gray-900 text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-700 transition">
+          Ir al simulador →
+        </a>
       </section>
 
       {/* ESTRUCTURAS */}
-      <section id="estructuras" className="bg-gray-50 px-8 py-24">
+      <section className="bg-gray-50 px-8 py-24">
         <div className="max-w-3xl mx-auto text-center">
           <h2 className="text-3xl font-bold mb-4">¿Cuál es la estructura correcta para vos?</h2>
           <p className="text-gray-500 mb-12">Comparamos las opciones más comunes para que puedas decidir con claridad.</p>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
             {["Unipersonal", "SAS", "SRL", "SA"].map((tipo) => (
               <div key={tipo} className="bg-white p-6 rounded-xl border border-gray-100 text-center">
                 <p className="font-semibold">{tipo}</p>
               </div>
             ))}
           </div>
+          <a href="/estructuras" className="bg-gray-900 text-white px-8 py-4 rounded-lg font-medium hover:bg-gray-700 transition">
+            Ver comparación completa →
+          </a>
         </div>
       </section>
 
       {/* FAQ */}
-      <section id="faq" className="max-w-3xl mx-auto px-8 py-24">
+      <section className="max-w-3xl mx-auto px-8 py-24">
         <h2 className="text-3xl font-bold mb-12 text-center">Preguntas frecuentes</h2>
         <div className="space-y-6">
           {[
@@ -89,10 +87,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="border-t border-gray-100 px-8 py-8 text-center text-sm text-gray-400">
-        <p>© 2025 NETO · Esta es una estimación orientativa, no asesoramiento contable o legal.</p>
-      </footer>
+      <Footer />
     </main>
   );
 }
